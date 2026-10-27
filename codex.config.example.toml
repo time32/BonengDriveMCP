@@ -1,0 +1,17 @@
+# Example only. Generate actual absolute paths with scripts/write_codex_config.py.
+[mcp_servers.boneng_drivesoft]
+command = "C:/path/to/boneng-drivesoft-mcp/.venv/Scripts/python.exe"
+args = ["-u", "C:/path/to/boneng-drivesoft-mcp/run_server.py"]
+cwd = "C:/path/to/boneng-drivesoft-mcp"
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 180
+
+[mcp_servers.boneng_drivesoft.env]
+BONENG_WORKSPACE = "C:/path/to/boneng-drivesoft-mcp/workspace"
+BONENG_DATA_DIR = "C:/path/to/boneng-drivesoft-mcp/data"
+BONENG_RELEASE_DIR = "C:/path/to/licensed/Drivesoft"
+# Optional: explicit, operator-verified AN serial MAC; there is no default device.
+# BONENG_SERIAL_MAC = "REPLACE_WITH_YOUR_VERIFIED_AN_MAC"
+# Optional when PowerShell 7 is not on PATH:
+# BONENG_PWSH_PATH = "C:/Program Files/PowerShell/7/pwsh.exe"
